@@ -73,12 +73,14 @@
   grid-template-columns: 64px 1fr;
 }
 
-/* Área de conteúdo */
+/* Área de conteúdo — tem cor e radius próprios */
 .page-content {
-  display: flex;
+  display:        flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 24px 16px;   /* vertical 24px / horizontal 16px */
+  gap:            16px;
+  padding:        16px;
+  background:     var(--color-bg-secondary);  /* #f4e3cf — um tom mais escuro que a página */
+  border-radius:  var(--radius-xl);           /* 16px — igual à sidebar */
 }
 ```
 
