@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import './styles/tokens.css';
-import ClientesPage from './pages/Clientes/ClientesPage';
+import ClientesPage    from './pages/Clientes/ClientesPage';
+import ReceiveisPage      from './pages/Recebiveis/ReceiveisPage';
+import NovoContratoPage  from './pages/NovoContrato/NovoContratoPage';
 
 import DSLayout from './design-system/DSLayout';
 import FoundationsSection       from './design-system/sections/FoundationsSection';
@@ -20,6 +22,8 @@ import NavItemSection           from './design-system/sections/NavItemSection';
 import SidebarSection           from './design-system/sections/SidebarSection';
 import LogoSection              from './design-system/sections/LogoSection';
 import PaginationSection        from './design-system/sections/PaginationSection';
+import StepperSection          from './design-system/sections/StepperSection';
+import ChartSection            from './design-system/sections/ChartSection';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +33,14 @@ const router = createBrowserRouter([
   {
     path: '/clientes',
     element: <ClientesPage />,
+  },
+  {
+    path: '/recebiveis',
+    element: <ReceiveisPage />,
+  },
+  {
+    path: '/recebiveis/novo-contrato',
+    element: <NovoContratoPage />,
   },
   {
     path: '/design-system',
@@ -52,6 +64,8 @@ const router = createBrowserRouter([
       { path: 'nav-item',           element: <NavItemSection /> },
       { path: 'sidebar',            element: <SidebarSection /> },
       { path: 'pagination',         element: <PaginationSection /> },
+      { path: 'stepper',            element: <StepperSection /> },
+      { path: 'chart',              element: <ChartSection /> },
     ],
   },
 ]);

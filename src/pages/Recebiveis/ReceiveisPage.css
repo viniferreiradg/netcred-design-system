@@ -1,0 +1,105 @@
+/* ─── Layout base ────────────────────────────────────────────────── */
+.recebiveis-layout {
+  display:               grid;
+  grid-template-columns: 272px 1fr;
+  min-height:            100vh;
+  padding:               var(--space-16);
+  gap:                   var(--space-16);
+  background:            var(--color-bg-primary);
+}
+
+.recebiveis-layout--collapsed {
+  grid-template-columns: 64px 1fr;
+}
+
+/* ─── Área de conteúdo ───────────────────────────────────────────── */
+.recebiveis-content {
+  display:        flex;
+  flex-direction: column;
+  min-width:      0;
+  background:     var(--color-bg-secondary);
+  border-radius:  var(--radius-xl);
+  padding:        var(--space-16);
+  gap:            var(--space-16);
+}
+
+/* ─── Stat Cards ─────────────────────────────────────────────────── */
+.stat-cards-grid {
+  display:               grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:                   var(--space-16);
+}
+
+/* ─── Ações ──────────────────────────────────────────────────────── */
+.session-actions {
+  display:         flex;
+  align-items:     center;
+  justify-content: flex-end;
+  gap:             var(--space-16);
+}
+
+/* ─── Paginação ──────────────────────────────────────────────────── */
+.session-pagination {
+  display:         flex;
+  justify-content: center;
+}
+
+/* ─── TopBar ─────────────────────────────────────────────────────── */
+.topbar {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-16);
+}
+
+.topbar__title {
+  font-family: var(--font-family-head);
+  font-size:   var(--text-h6-size);
+  font-weight: var(--text-h6-weight);
+  color:       var(--color-text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.topbar__search    { flex: 1; }
+
+.topbar__actions {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-8);
+  flex-shrink: 0;
+}
+
+.topbar__user {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-8);
+  flex-shrink: 0;
+}
+
+.topbar__avatar {
+  width:         40px;
+  height:        40px;
+  border-radius: var(--radius-full);
+  object-fit:    cover;
+  flex-shrink:   0;
+}
+
+.topbar__user-info {
+  display:        flex;
+  flex-direction: column;
+}
+
+.topbar__user-name {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-s-size);
+  font-weight: 600;
+  color:       var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.topbar__user-email {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-xs-size);
+  color:       var(--color-text-secondary);
+  white-space: nowrap;
+}

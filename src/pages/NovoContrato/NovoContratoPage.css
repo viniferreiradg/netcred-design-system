@@ -1,0 +1,236 @@
+/* ─── Layout base ────────────────────────────────────────────────── */
+.novo-contrato-layout {
+  display:               grid;
+  grid-template-columns: 272px 1fr;
+  min-height:            100vh;
+  padding:               var(--space-16);
+  gap:                   var(--space-16);
+  background:            var(--color-bg-primary);
+}
+
+.novo-contrato-layout--collapsed {
+  grid-template-columns: 64px 1fr;
+}
+
+/* ─── Área de conteúdo ───────────────────────────────────────────── */
+.novo-contrato-content {
+  display:        flex;
+  flex-direction: column;
+  min-width:      0;
+  background:     var(--color-bg-secondary);
+  border-radius:  var(--radius-xl);
+  padding:        var(--space-16);
+  gap:            var(--space-24);
+}
+
+/* ─── TopBar ─────────────────────────────────────────────────────── */
+.topbar {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-16);
+}
+
+.topbar__back {
+  background:    none;
+  border:        none;
+  cursor:        pointer;
+  padding:       var(--space-4);
+  border-radius: var(--radius-sm);
+  color:         var(--color-text-primary);
+  display:       flex;
+  align-items:   center;
+  flex-shrink:   0;
+  transition:    opacity 0.15s;
+}
+.topbar__back:hover { opacity: 0.6; }
+
+.topbar__title {
+  font-family: var(--font-family-head);
+  font-size:   var(--text-h6-size);
+  font-weight: var(--text-h6-weight);
+  color:       var(--color-text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.topbar__search    { flex: 1; }
+
+.topbar__actions {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-8);
+  flex-shrink: 0;
+}
+
+.topbar__user {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-8);
+  flex-shrink: 0;
+}
+
+.topbar__avatar {
+  width:         40px;
+  height:        40px;
+  border-radius: var(--radius-full);
+  object-fit:    cover;
+  flex-shrink:   0;
+}
+
+.topbar__user-info {
+  display:        flex;
+  flex-direction: column;
+}
+
+.topbar__user-name {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-s-size);
+  font-weight: 600;
+  color:       var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.topbar__user-email {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-xs-size);
+  color:       var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* ─── Stepper wrapper ────────────────────────────────────────────── */
+.novo-contrato-stepper {
+  padding: 0 var(--space-40);
+}
+
+/* ─── Step card ──────────────────────────────────────────────────── */
+.step-card {
+  background:    var(--color-bg-primary);
+  border-radius: var(--radius-xl);
+  padding:       var(--space-32);
+  display:       flex;
+  flex-direction: column;
+  gap:           var(--space-24);
+  max-width:     640px;
+  align-self:    center;
+  width:         100%;
+}
+
+.step-card--wide {
+  max-width: 100%;
+  align-self: stretch;
+}
+
+.step-card__title {
+  font-family: var(--font-family-head);
+  font-size:   var(--text-h6-size);
+  font-weight: var(--text-h6-weight);
+  color:       var(--color-text-primary);
+}
+
+.step-card__desc {
+  font-family:  var(--font-family-body);
+  font-size:    var(--text-body-s-size);
+  color:        var(--color-text-secondary);
+  margin-top:   calc(var(--space-8) * -1);
+}
+
+.step-card__actions {
+  display:         flex;
+  justify-content: flex-end;
+  gap:             var(--space-12);
+  padding-top:     var(--space-8);
+  border-top:      var(--border-thin) solid var(--color-bg-tertiary);
+}
+
+/* ─── Option cards (etapas 1 e 2) ───────────────────────────────── */
+.step-card__options {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-12);
+}
+
+.option-card {
+  display:       flex;
+  flex-direction: column;
+  gap:           var(--space-4);
+  background:    var(--color-bg-secondary);
+  border:        var(--border-medium) solid transparent;
+  border-radius: var(--radius-lg);
+  padding:       var(--space-16) var(--space-20);
+  cursor:        pointer;
+  transition:    border-color 0.15s, background 0.15s;
+}
+
+.option-card--selected {
+  border-color: var(--color-bg-sidebar);
+  background:   var(--color-bg-primary);
+}
+
+.option-card__desc {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-xs-size);
+  color:       var(--color-text-secondary);
+  padding-left: var(--space-24);
+}
+
+/* ─── Form grid (etapa 3) ────────────────────────────────────────── */
+.form-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   var(--space-32);
+}
+
+.form-col {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-12);
+}
+
+.form-section-label {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-xs-size);
+  font-weight: 700;
+  color:       var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:     var(--space-12);
+}
+
+.form-radios {
+  display: flex;
+  gap:     var(--space-24);
+}
+
+/* ─── Resumo financeiro ──────────────────────────────────────────── */
+.form-summary {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-8);
+  background:     var(--color-bg-secondary);
+  border-radius:  var(--radius-md);
+  padding:        var(--space-16);
+}
+
+.form-summary__item {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+}
+
+.form-summary__label {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-s-size);
+  color:       var(--color-text-secondary);
+}
+
+.form-summary__value {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-s-size);
+  font-weight: 600;
+  color:       var(--color-text-primary);
+}

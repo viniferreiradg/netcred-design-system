@@ -40,6 +40,18 @@ const nav = [
     ],
   },
   {
+    group: 'Forms',
+    items: [
+      { to: `${BASE}/stepper`, label: 'Stepper' },
+    ],
+  },
+  {
+    group: 'Charts',
+    items: [
+      { to: `${BASE}/chart`, label: 'Chart' },
+    ],
+  },
+  {
     group: 'Sidebar',
     items: [
       { to: `${BASE}/nav-item`, label: 'Nav Item' },

@@ -1,0 +1,80 @@
+.stepper {
+  display:     flex;
+  align-items: flex-start;
+  width:       100%;
+}
+
+/* ─── Item (circle + line + label) ──────────────────────────────── */
+.stepper__item {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  flex:           1;
+  position:       relative;
+}
+
+/* ─── Track (circle + connector) ────────────────────────────────── */
+.stepper__track {
+  display:     flex;
+  align-items: center;
+  width:       100%;
+}
+
+/* ─── Circle ─────────────────────────────────────────────────────── */
+.stepper__circle {
+  width:           32px;
+  height:          32px;
+  border-radius:   var(--radius-full);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  flex-shrink:     0;
+  transition:      background 0.2s, border-color 0.2s;
+}
+
+.stepper__circle--pending {
+  background:  var(--color-bg-tertiary);
+  border:      var(--border-medium) solid var(--color-disabled-light);
+  color:       var(--color-text-secondary);
+}
+
+.stepper__circle--active {
+  background:  var(--color-bg-sidebar);
+  border:      var(--border-medium) solid var(--color-bg-sidebar);
+  color:       var(--color-text-quartenary);
+}
+
+.stepper__circle--completed {
+  background:  var(--color-success-medium);
+  border:      var(--border-medium) solid var(--color-success-medium);
+  color:       var(--color-text-quartenary);
+}
+
+.stepper__number {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-s-size);
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* ─── Connector line ─────────────────────────────────────────────── */
+.stepper__line {
+  flex:   1;
+  height: var(--border-medium);
+}
+
+.stepper__line--done    { background: var(--color-success-medium); }
+.stepper__line--pending { background: var(--color-disabled-light); }
+
+/* ─── Label ──────────────────────────────────────────────────────── */
+.stepper__label {
+  margin-top:  var(--space-8);
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-xs-size);
+  text-align:  center;
+  white-space: nowrap;
+}
+
+.stepper__label--pending   { color: var(--color-text-secondary); font-weight: 400; }
+.stepper__label--active    { color: var(--color-text-primary);   font-weight: 600; }
+.stepper__label--completed { color: var(--color-success-medium); font-weight: 400; }
