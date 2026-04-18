@@ -60,6 +60,91 @@
 .radius-label { font-size: 12px; font-family: monospace; color: var(--color-text-secondary); }
 .radius-value { font-size: 11px; color: var(--color-text-brand); }
 
+/* GRID */
+.grid-demo {
+  display:       flex;
+  gap:           16px;
+  padding:       var(--space-16);
+  background:    var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-24);
+  overflow:      hidden;
+}
+
+.grid-demo__sidebar {
+  flex-shrink: 0;
+}
+
+.grid-demo__content {
+  display: flex;
+  gap:     16px;
+  flex:    1;
+}
+
+.grid-demo__col {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  border-radius:   var(--radius-sm);
+  height:          80px;
+}
+
+.grid-demo__col--sidebar {
+  width:      272px;
+  background: rgba(69, 0, 255, 0.15);
+  border:     1px solid rgba(69, 0, 255, 0.3);
+}
+
+.grid-demo__col--content {
+  flex:       1;
+  min-width:  0;
+  background: rgba(255, 0, 0, 0.1);
+  border:     1px solid rgba(255, 0, 0, 0.25);
+}
+
+.grid-demo__label {
+  font-size:   10px;
+  font-weight: 600;
+  color:       var(--color-text-secondary);
+  text-align:  center;
+  line-height: 1.4;
+}
+
+.grid-specs {
+  display:   flex;
+  gap:       var(--space-32);
+  flex-wrap: wrap;
+}
+
+.grid-spec-group {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-4);
+}
+
+.grid-spec-title {
+  font-size:      12px;
+  font-weight:    700;
+  color:          var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom:  var(--space-4);
+}
+
+.grid-spec-row {
+  font-size: 13px;
+  color:     var(--color-text-secondary);
+}
+
+.grid-spec-code {
+  font-family:   monospace;
+  font-size:     11px;
+  color:         var(--color-text-brand);
+  background:    var(--color-bg-tertiary);
+  padding:       2px var(--space-8);
+  border-radius: var(--radius-xs);
+}
+
 /* BORDER */
 .border-list { display: flex; gap: var(--space-32); align-items: center; }
 .border-item { display: flex; flex-direction: column; gap: var(--space-8); align-items: center; }

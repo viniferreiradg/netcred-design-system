@@ -272,6 +272,54 @@ export default function FoundationsSection() {
         </div>
       </section>
 
+      {/* GRID */}
+      <section className="ds-section">
+        <h2 className="ds-section-title">Grid — Desktop</h2>
+        <p className="ds-section-sub">Frame base: <strong>1440 × 813px</strong> — sidebar fixa + 8 colunas de conteúdo</p>
+
+        <div className="grid-demo">
+          {/* Sidebar col */}
+          <div className="grid-demo__sidebar">
+            <div className="grid-demo__col grid-demo__col--sidebar">
+              <span className="grid-demo__label">Sidebar<br/>272px</span>
+            </div>
+          </div>
+
+          {/* Content cols */}
+          <div className="grid-demo__content">
+            {Array.from({ length: 8 }, (_, i) => (
+              <div key={i} className="grid-demo__col grid-demo__col--content">
+                <span className="grid-demo__label">126px</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Specs */}
+        <div className="grid-specs">
+          <div className="grid-spec-group">
+            <span className="grid-spec-title">Sidebar</span>
+            <span className="grid-spec-row">Largura: <strong>272px</strong></span>
+            <span className="grid-spec-row">Colapsada: <strong>64px</strong></span>
+            <span className="grid-spec-row">Offset: <strong>16px</strong></span>
+            <span className="grid-spec-row">Gutter: <strong>24px</strong></span>
+          </div>
+          <div className="grid-spec-group">
+            <span className="grid-spec-title">Conteúdo</span>
+            <span className="grid-spec-row">Colunas: <strong>8</strong></span>
+            <span className="grid-spec-row">Coluna: <strong>126px</strong></span>
+            <span className="grid-spec-row">Gutter: <strong>16px</strong></span>
+            <span className="grid-spec-row">Offset: <strong>16px</strong></span>
+          </div>
+          <div className="grid-spec-group">
+            <span className="grid-spec-title">CSS</span>
+            <code className="grid-spec-code">{`grid-template-columns: 272px 1fr`}</code>
+            <code className="grid-spec-code">{`grid-template-columns: repeat(8, 126px)`}</code>
+            <code className="grid-spec-code">{`gap: 16px`}</code>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
