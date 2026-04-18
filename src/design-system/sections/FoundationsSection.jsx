@@ -277,15 +277,14 @@ export default function FoundationsSection() {
         <h2 className="ds-section-title">Grid — Desktop</h2>
         <p className="ds-section-sub">Frame base: <strong>1440 × 813px</strong> — sidebar fixa + 8 colunas de conteúdo</p>
 
+        {/* Sidebar expandida */}
+        <p className="grid-state-label">Sidebar expandida (272px)</p>
         <div className="grid-demo">
-          {/* Sidebar col */}
           <div className="grid-demo__sidebar">
-            <div className="grid-demo__col grid-demo__col--sidebar">
+            <div className="grid-demo__col grid-demo__col--sidebar" style={{ width: 272 }}>
               <span className="grid-demo__label">Sidebar<br/>272px</span>
             </div>
           </div>
-
-          {/* Content cols */}
           <div className="grid-demo__content">
             {Array.from({ length: 8 }, (_, i) => (
               <div key={i} className="grid-demo__col grid-demo__col--content">
@@ -295,27 +294,44 @@ export default function FoundationsSection() {
           </div>
         </div>
 
+        {/* Sidebar minimizada */}
+        <p className="grid-state-label">Sidebar minimizada (64px)</p>
+        <div className="grid-demo">
+          <div className="grid-demo__sidebar">
+            <div className="grid-demo__col grid-demo__col--sidebar" style={{ width: 64 }}>
+              <span className="grid-demo__label">64px</span>
+            </div>
+          </div>
+          <div className="grid-demo__content">
+            {Array.from({ length: 8 }, (_, i) => (
+              <div key={i} className="grid-demo__col grid-demo__col--content">
+                <span className="grid-demo__label">152px</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Specs */}
         <div className="grid-specs">
           <div className="grid-spec-group">
             <span className="grid-spec-title">Sidebar</span>
-            <span className="grid-spec-row">Largura: <strong>272px</strong></span>
-            <span className="grid-spec-row">Colapsada: <strong>64px</strong></span>
+            <span className="grid-spec-row">Expandida: <strong>272px</strong></span>
+            <span className="grid-spec-row">Minimizada: <strong>64px</strong></span>
             <span className="grid-spec-row">Offset: <strong>16px</strong></span>
             <span className="grid-spec-row">Gutter: <strong>24px</strong></span>
           </div>
           <div className="grid-spec-group">
             <span className="grid-spec-title">Conteúdo</span>
             <span className="grid-spec-row">Colunas: <strong>8</strong></span>
-            <span className="grid-spec-row">Coluna: <strong>126px</strong></span>
-            <span className="grid-spec-row">Gutter: <strong>16px</strong></span>
-            <span className="grid-spec-row">Offset: <strong>16px</strong></span>
+            <span className="grid-spec-row">Coluna (expandida): <strong>126px</strong></span>
+            <span className="grid-spec-row">Coluna (minimizada): <strong>152px</strong></span>
+            <span className="grid-spec-row">Gutter: <strong>16px</strong> | Offset: <strong>16px</strong></span>
           </div>
           <div className="grid-spec-group">
             <span className="grid-spec-title">CSS</span>
             <code className="grid-spec-code">{`grid-template-columns: 272px 1fr`}</code>
-            <code className="grid-spec-code">{`grid-template-columns: repeat(8, 126px)`}</code>
-            <code className="grid-spec-code">{`gap: 16px`}</code>
+            <code className="grid-spec-code">{`grid-template-columns: 64px 1fr  /* colapsada */`}</code>
+            <code className="grid-spec-code">{`gap: 16px | padding: 16px`}</code>
           </div>
         </div>
       </section>

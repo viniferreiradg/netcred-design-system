@@ -50,23 +50,34 @@
 | Offset | 16px |
 | Alinhamento | RIGHT (MAX) |
 
+### Sidebar minimizada
+| Propriedade | Valor |
+|-------------|-------|
+| Largura fixa | **64px** |
+| Colunas de conteúdo | 8 × **152px** |
+| Gutter | 16px |
+| Offset | 16px |
+
 ### CSS de referência para telas
 ```css
+/* Layout raiz */
 .page-layout {
   display: grid;
-  grid-template-columns: 272px 1fr;
+  grid-template-columns: 272px 1fr; /* expandida */
   min-height: 100vh;
 }
+.page-layout--collapsed {
+  grid-template-columns: 64px 1fr;  /* minimizada */
+}
 
+/* Área de conteúdo */
 .page-content {
   display: grid;
-  grid-template-columns: repeat(8, 126px);
+  grid-template-columns: repeat(8, 1fr);
   gap: 16px;
   padding: 16px;
 }
 ```
-
-> Sidebar colapsada usa 64px — o grid de conteúdo expande para ocupar o espaço restante.
 
 ---
 

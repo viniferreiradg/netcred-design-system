@@ -136,6 +136,15 @@
   color:     var(--color-text-secondary);
 }
 
+.grid-state-label {
+  font-size:     12px;
+  font-weight:   600;
+  color:         var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-8);
+}
+
 .grid-spec-code {
   font-family:   monospace;
   font-size:     11px;
