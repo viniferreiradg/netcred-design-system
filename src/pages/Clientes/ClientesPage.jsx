@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Sidebar     from '../../components/Sidebar/Sidebar';
 import InputText   from '../../components/InputText/InputText';
 import IconButton  from '../../components/IconButton/IconButton';
+import StatCard    from '../../components/StatCard/StatCard';
 import {
   LayoutDashboard,
   User,
@@ -13,6 +14,9 @@ import {
   Settings,
   Search,
   Moon,
+  HeartHandshake,
+  Crown,
+  Timer,
 } from 'lucide-react';
 import './ClientesPage.css';
 
@@ -105,7 +109,14 @@ export default function ClientesPage() {
           </div>
         </header>
 
-        {/* Sessão 3 — Stat Cards */}
+        {/* ── Sessão 3 — Stat Cards ──────────────────────── */}
+        <div className="stat-cards-grid">
+          <StatCard icon={HeartHandshake} value="125" label="Total de clientes" trend="up" />
+          <StatCard icon={User}           value="15"  label="Novos clientes"    trend="up" />
+          <StatCard icon={Crown}          value="72"  label="Opt-in Ativos"     trend="up" />
+          <StatCard icon={Timer}          value="18"  label="Opt-in Inativos"   trend="down" />
+        </div>
+
         {/* Sessão 4 — Ações + Tabela */}
         {/* Sessão 5 — Paginação */}
       </main>
