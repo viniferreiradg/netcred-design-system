@@ -30,6 +30,20 @@
   gap:                   var(--space-16);
 }
 
+/* ─── Sessão 6 — Paginação ───────────────────────────────────────── */
+.session-pagination {
+  display:         flex;
+  justify-content: center;
+}
+
+/* ─── Sessão 4 — Ações ───────────────────────────────────────────── */
+.session-actions {
+  display:         flex;
+  align-items:     center;
+  justify-content: flex-end;
+  gap:             var(--space-16);
+}
+
 /* ─── TopBar ─────────────────────────────────────────────────────── */
 .topbar {
   display:     flex;
