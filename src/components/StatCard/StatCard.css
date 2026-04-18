@@ -6,7 +6,7 @@
   padding:        var(--space-16);
   background:     var(--color-wl-300);
   border-radius:  var(--radius-xl);
-  width:          fit-content;
+  width:          100%;
 }
 
 /* ─── Bolha do ícone ────────────────────────────────────────────── */
