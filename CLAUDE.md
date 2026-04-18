@@ -60,22 +60,25 @@
 
 ### CSS de referência para telas
 ```css
-/* Layout raiz */
+/* Layout raiz — padding 16px cria o espaço ao redor da sidebar */
 .page-layout {
   display: grid;
-  grid-template-columns: 272px 1fr; /* expandida */
+  grid-template-columns: 272px 1fr;
   min-height: 100vh;
+  padding: 16px;        /* offset do grid — sidebar flutua 16px das bordas */
+  gap: 16px;
+  background: var(--color-bg-primary);
 }
 .page-layout--collapsed {
-  grid-template-columns: 64px 1fr;  /* minimizada */
+  grid-template-columns: 64px 1fr;
 }
 
 /* Área de conteúdo */
 .page-content {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 16px;
-  padding: 16px;
+  padding: 24px 16px;   /* vertical 24px / horizontal 16px */
 }
 ```
 
@@ -354,7 +357,9 @@ import Sidebar from './components/Sidebar/Sidebar';
 | `onNavigate` | fn(label) | — | chamado ao clicar em qualquer item |
 
 **Dimensões:** expandida 272px, colapsada 64px. Transição animada.
-**Notas:** Sub-menus só ficam abertos no modo expandido. Perfil + settings + logout ficam no rodapé.
+**Visual:** `border-radius: var(--radius-xl)` nos 4 cantos. `overflow: hidden` para clipar o conteúdo interno.
+**Posicionamento:** A sidebar sempre é usada dentro de um container com `padding: var(--space-16)` — nunca colada na borda do viewport.
+**Notas:** Sub-menus só ficam abertos no modo expandido. CompanySwitcher + logout ficam no rodapé.
 
 ---
 

@@ -3,6 +3,8 @@
   display:               grid;
   grid-template-columns: 272px 1fr;
   min-height:            100vh;
+  padding:               var(--space-16);
+  gap:                   var(--space-16);
   background:            var(--color-bg-primary);
 }
 
