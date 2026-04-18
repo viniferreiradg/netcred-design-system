@@ -27,6 +27,49 @@
 
 ---
 
+## Grid — Layout Desktop
+
+**Frame base:** 1440 × 813px
+
+### Sidebar (grid esquerda)
+| Propriedade | Valor |
+|-------------|-------|
+| Largura fixa | **272px** |
+| Alinhamento | LEFT (MIN) |
+| Offset | 16px |
+| Gutter | 24px |
+| Colunas | 1 |
+
+### Conteúdo (grid direita)
+| Propriedade | Valor |
+|-------------|-------|
+| Largura disponível | **1168px** (1440 − 272) |
+| Colunas | **8** |
+| Largura por coluna | 126px |
+| Gutter | 16px |
+| Offset | 16px |
+| Alinhamento | RIGHT (MAX) |
+
+### CSS de referência para telas
+```css
+.page-layout {
+  display: grid;
+  grid-template-columns: 272px 1fr;
+  min-height: 100vh;
+}
+
+.page-content {
+  display: grid;
+  grid-template-columns: repeat(8, 126px);
+  gap: 16px;
+  padding: 16px;
+}
+```
+
+> Sidebar colapsada usa 64px — o grid de conteúdo expande para ocupar o espaço restante.
+
+---
+
 ## Tokens — `src/styles/tokens.css`
 
 ### Cores de marca
