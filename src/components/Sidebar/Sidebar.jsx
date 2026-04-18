@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { LogOut, Settings, ChevronLeft, ChevronRight } from 'lucide-react';
-import Logo   from '../Logo/Logo';
-import NavItem from '../NavItem/NavItem';
+import { LogOut, ChevronLeft, ChevronRight } from 'lucide-react';
+import Logo             from '../Logo/Logo';
+import NavItem          from '../NavItem/NavItem';
+import CompanySwitcher  from '../CompanySwitcher/CompanySwitcher';
 import './Sidebar.css';
 
 /**
@@ -10,7 +11,8 @@ import './Sidebar.css';
  * Props:
  *  navItems    array   [ { label, icon, notification?, subItems?: [{ label, notification? }] } ]
  *  activeItem  string  label do item ativo
- *  user        object  { name, role, avatar? }
+ *  company     object  { name, logo? } — empresa ativa no rodapé
+ *  onCompany   fn      abre o seletor de empresas
  *  collapsed   bool    controle externo de estado colapsado
  *  onCollapse  fn      chamado ao clicar no botão colapsar (passa novo bool)
  *  onLogout    fn
@@ -19,7 +21,8 @@ import './Sidebar.css';
 export default function Sidebar({
   navItems    = [],
   activeItem  = '',
-  user        = { name: 'Usuário', role: 'Cargo' },
+  company     = { name: 'Empresa' },
+  onCompany,
   collapsed   = false,
   onCollapse,
   onLogout,
@@ -92,27 +95,16 @@ export default function Sidebar({
         </nav>
       </div>
 
-      {/* ── Logout / perfil ───────────────────────────────── */}
+      {/* ── Rodapé: company switcher + logout ────────────── */}
       <div className="sidebar__bottom">
 
-        {/* Perfil */}
-        {!isCollapsed && (
-          <div className="sidebar__profile">
-            <div className="sidebar__avatar">
-              {user.avatar
-                ? <img src={user.avatar} alt={user.name} className="sidebar__avatar-img" />
-                : <span className="sidebar__avatar-initials">{initials(user.name)}</span>
-              }
-              <div className="sidebar__profile-info">
-                <span className="sidebar__profile-name">{user.name}</span>
-                <span className="sidebar__profile-role">{user.role}</span>
-              </div>
-            </div>
-            <button className="sidebar__settings" aria-label="Configurações" onClick={() => onNavigate?.('settings')}>
-              <Settings size={16} strokeWidth={1.5} />
-            </button>
-          </div>
-        )}
+        {/* Company Switcher */}
+        <CompanySwitcher
+          name={company.name}
+          logo={company.logo}
+          collapsed={isCollapsed}
+          onClick={onCompany}
+        />
 
         {/* Logout */}
         <NavItem
@@ -142,10 +134,3 @@ export default function Sidebar({
   );
 }
 
-function initials(name = '') {
-  return name
-    .split(' ')
-    .slice(0, 2)
-    .map(n => n[0]?.toUpperCase() ?? '')
-    .join('');
-}

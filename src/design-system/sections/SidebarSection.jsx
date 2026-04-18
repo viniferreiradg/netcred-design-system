@@ -26,10 +26,10 @@ const NAV_ITEMS = [
   { label: 'Notificações', icon: Bell,         notification: 7 },
 ];
 
-const USER = { name: 'Carlos Mendes', role: 'Gerente Comercial' };
+const COMPANY = { name: 'La moda' };
 
 export default function SidebarSection() {
-  const [active, setActive]   = useState('Dashboard');
+  const [active, setActive]       = useState('Dashboard');
   const [collapsed, setCollapsed] = useState(false);
 
   return (
@@ -44,11 +44,12 @@ export default function SidebarSection() {
           <Sidebar
             navItems={NAV_ITEMS}
             activeItem={active}
-            user={USER}
+            company={COMPANY}
             collapsed={collapsed}
             onCollapse={setCollapsed}
             onNavigate={setActive}
             onLogout={() => alert('Logout')}
+            onCompany={() => alert('Trocar empresa')}
           />
           <div className="sb-demo-content">
             <span className="sb-demo-active">Página ativa: <strong>{active}</strong></span>
@@ -59,13 +60,13 @@ export default function SidebarSection() {
       {/* ── Max expandida ────────────────────────────────── */}
       <section className="ds-section">
         <h2 className="ds-section-title">Sidebar — Max (272 px)</h2>
-        <p className="ds-section-sub">Versão expandida com logo completo, labels e área de perfil</p>
+        <p className="ds-section-sub">Versão expandida com logo completo, labels e company switcher</p>
 
         <div className="sb-static-wrap">
           <Sidebar
             navItems={NAV_ITEMS}
             activeItem="Dashboard"
-            user={USER}
+            company={COMPANY}
           />
         </div>
       </section>
@@ -79,7 +80,7 @@ export default function SidebarSection() {
           <Sidebar
             navItems={NAV_ITEMS}
             activeItem="Propostas"
-            user={USER}
+            company={COMPANY}
             collapsed
           />
         </div>

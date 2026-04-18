@@ -323,6 +323,21 @@ import NavItem from './components/NavItem/NavItem';
 
 ---
 
+### CompanySwitcher — `src/components/CompanySwitcher/CompanySwitcher.jsx`
+```jsx
+import CompanySwitcher from './components/CompanySwitcher/CompanySwitcher';
+```
+| Prop | Tipo | Default | |
+|------|------|---------|--|
+| `name` | string | `'Empresa'` | nome da empresa |
+| `logo` | string | — | URL da imagem (opcional — usa iniciais se ausente) |
+| `collapsed` | bool | `false` | modo sidebar colapsada (oculta nome e chevron) |
+| `onClick` | fn | — | abre seletor de empresas |
+
+**Notas:** Fica no rodapé da Sidebar, acima do NavItem "Sair". Iniciais geradas automaticamente (2 letras) quando não há logo.
+
+---
+
 ### Sidebar — `src/components/Sidebar/Sidebar.jsx`
 ```jsx
 import Sidebar from './components/Sidebar/Sidebar';
@@ -331,7 +346,8 @@ import Sidebar from './components/Sidebar/Sidebar';
 |------|------|---------|--|
 | `navItems` | array | `[]` | `[{ label, icon, notification?, subItems?: [{label, notification?}] }]` |
 | `activeItem` | string | `''` | label do item ativo |
-| `user` | object | `{name, role}` | `{ name, role, avatar? }` — avatar é URL de imagem |
+| `company` | object | `{name}` | `{ name, logo? }` — empresa exibida no rodapé |
+| `onCompany` | fn | — | abre seletor de empresas |
 | `collapsed` | bool | `false` | controlado externamente |
 | `onCollapse` | fn | — | recebe novo bool |
 | `onLogout` | fn | — | |

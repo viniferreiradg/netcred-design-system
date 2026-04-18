@@ -1,0 +1,70 @@
+/* ─── Botão principal ────────────────────────────────────────────── */
+.company-switcher {
+  display:         flex;
+  align-items:     center;
+  gap:             var(--space-8);
+  width:           100%;
+  padding:         var(--space-8);
+  background:      transparent;
+  border:          var(--border-thin) solid var(--color-navy-600);
+  border-radius:   var(--radius-md);
+  cursor:          pointer;
+  transition:      border-color 0.15s, background 0.15s;
+}
+
+.company-switcher:hover {
+  background:    var(--color-navy-700);
+  border-color:  var(--color-navy-500);
+}
+
+.company-switcher--collapsed {
+  justify-content: center;
+  padding: var(--space-8);
+}
+
+/* ─── Avatar ────────────────────────────────────────────────────── */
+.company-switcher__avatar {
+  width:       24px;
+  height:      24px;
+  flex-shrink: 0;
+}
+
+.company-switcher__logo {
+  width:         24px;
+  height:        24px;
+  border-radius: var(--radius-full);
+  object-fit:    cover;
+}
+
+.company-switcher__initials {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  width:           24px;
+  height:          24px;
+  border-radius:   var(--radius-full);
+  background:      var(--color-wl-400);
+  color:           var(--color-text-quartenary);
+  font-size:       var(--text-body-xxs-size);
+  font-weight:     700;
+  font-family:     var(--font-family-body);
+}
+
+/* ─── Texto ─────────────────────────────────────────────────────── */
+.company-switcher__name {
+  flex:          1;
+  text-align:    left;
+  font-family:   var(--font-family-body);
+  font-size:     var(--text-body-xs-size);
+  font-weight:   400;
+  color:         var(--color-text-quartenary);
+  white-space:   nowrap;
+  overflow:      hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Chevron ───────────────────────────────────────────────────── */
+.company-switcher__chevron {
+  flex-shrink: 0;
+  color:       var(--color-text-quartenary);
+}
