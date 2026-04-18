@@ -2,52 +2,54 @@ import { NavLink, Outlet } from 'react-router-dom';
 import './DSLayout.css';
 import './ds-shared.css';
 
+const BASE = '/design-system';
+
 const nav = [
   {
     group: 'Foundations',
     items: [
-      { to: '/foundations', label: 'Foundations' },
-      { to: '/logo',        label: 'Logo' },
+      { to: `${BASE}/foundations`, label: 'Foundations' },
+      { to: `${BASE}/logo`,        label: 'Logo' },
     ],
   },
   {
     group: 'Components',
     items: [
-      { to: '/button',             label: 'Button' },
-      { to: '/icon-button',        label: 'Icon Button' },
-      { to: '/notification-badge', label: 'Notification Badge' },
-      { to: '/feedback',           label: 'Feedback' },
-      { to: '/toggle',             label: 'Toggle Switch' },
-      { to: '/radio',              label: 'Radio Button' },
-      { to: '/checkbox',           label: 'Checkbox' },
-      { to: '/input-text',         label: 'Input Text' },
-      { to: '/badge',              label: 'Badge' },
+      { to: `${BASE}/button`,             label: 'Button' },
+      { to: `${BASE}/icon-button`,        label: 'Icon Button' },
+      { to: `${BASE}/notification-badge`, label: 'Notification Badge' },
+      { to: `${BASE}/feedback`,           label: 'Feedback' },
+      { to: `${BASE}/toggle`,             label: 'Toggle Switch' },
+      { to: `${BASE}/radio`,              label: 'Radio Button' },
+      { to: `${BASE}/checkbox`,           label: 'Checkbox' },
+      { to: `${BASE}/input-text`,         label: 'Input Text' },
+      { to: `${BASE}/badge`,              label: 'Badge' },
     ],
   },
   {
     group: 'Tables',
     items: [
-      { to: '/table',      label: 'Table' },
-      { to: '/pagination', label: 'Pagination' },
+      { to: `${BASE}/table`,      label: 'Table' },
+      { to: `${BASE}/pagination`, label: 'Pagination' },
     ],
   },
   {
     group: 'Cards',
     items: [
-      { to: '/stat-card', label: 'Stat Card' },
+      { to: `${BASE}/stat-card`, label: 'Stat Card' },
     ],
   },
   {
     group: 'Sidebar',
     items: [
-      { to: '/nav-item', label: 'Nav Item' },
-      { to: '/sidebar',  label: 'Sidebar' },
+      { to: `${BASE}/nav-item`, label: 'Nav Item' },
+      { to: `${BASE}/sidebar`,  label: 'Sidebar' },
     ],
   },
   {
     group: 'Reference',
     items: [
-      { to: '/icons', label: 'Icons' },
+      { to: `${BASE}/icons`, label: 'Icons' },
     ],
   },
 ];
