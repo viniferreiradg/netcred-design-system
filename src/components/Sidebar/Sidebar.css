@@ -59,7 +59,7 @@
   background:     var(--color-navy-800);
   margin:         0 calc(-1 * var(--space-16)) calc(-1 * var(--space-32));
   padding:        var(--space-16);
-  border-radius:  0 0 0 0;
+  border-radius:  var(--radius-xl) var(--radius-xl) 0 0;
 }
 
 
