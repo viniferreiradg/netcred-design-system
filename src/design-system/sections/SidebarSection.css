@@ -3,6 +3,7 @@
 /* ─── Wrapper interativo ────────────────────────────────────────── */
 .sb-demo-wrap {
   display:       flex;
+  align-items:   stretch;
   border-radius: var(--radius-lg);
   overflow:      hidden;
   border:        var(--border-thin) solid var(--color-bg-tertiary);
@@ -30,6 +31,7 @@
 /* ─── Wrappers estáticos ────────────────────────────────────────── */
 .sb-static-wrap {
   display:       inline-flex;
+  align-items:   stretch;
   border-radius: var(--radius-lg);
   overflow:      hidden;
   border:        var(--border-thin) solid var(--color-bg-tertiary);
