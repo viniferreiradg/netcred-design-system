@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import './styles/tokens.css';
+import ClientesPage from './pages/Clientes/ClientesPage';
 
 import DSLayout from './design-system/DSLayout';
 import FoundationsSection       from './design-system/sections/FoundationsSection';
@@ -23,7 +24,11 @@ import PaginationSection        from './design-system/sections/PaginationSection
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Navigate to="/design-system" replace />,
+    element: <Navigate to="/clientes" replace />,
+  },
+  {
+    path: '/clientes',
+    element: <ClientesPage />,
   },
   {
     path: '/design-system',

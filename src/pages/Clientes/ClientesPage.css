@@ -1,0 +1,20 @@
+/* ─── Layout base (grid sidebar + conteúdo) ─────────────────────── */
+.clientes-layout {
+  display:               grid;
+  grid-template-columns: 272px 1fr;
+  min-height:            100vh;
+  background:            var(--color-bg-primary);
+}
+
+.clientes-layout--collapsed {
+  grid-template-columns: 64px 1fr;
+}
+
+/* ─── Área de conteúdo ───────────────────────────────────────────── */
+.clientes-content {
+  display:        flex;
+  flex-direction: column;
+  min-width:      0;
+  padding:        var(--space-32);
+  gap:            var(--space-24);
+}
