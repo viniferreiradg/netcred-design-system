@@ -1,0 +1,165 @@
+/* ─── Container ─────────────────────────────────────────────────── */
+.sidebar {
+  display:        flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:          272px;
+  min-height:     100vh;
+  background:     var(--color-bg-sidebar);
+  padding:        var(--space-32) var(--space-16);
+  gap:            var(--space-32);
+  flex-shrink:    0;
+  transition:     width 0.2s ease;
+  position:       relative;
+}
+
+.sidebar--min {
+  width: 64px;
+}
+
+/* ─── Top (logo + nav) ──────────────────────────────────────────── */
+.sidebar__top {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-32);
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebar__logo {
+  display:     flex;
+  align-items: center;
+  height:      32px;
+}
+
+.sidebar__nav {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-2);
+  flex: 1;
+}
+
+.sidebar__nav-group {
+  display:        flex;
+  flex-direction: column;
+}
+
+.sidebar__sub {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-2);
+  margin-top:     var(--space-2);
+}
+
+/* ─── Bottom (perfil + logout + colapsar) ───────────────────────── */
+.sidebar__bottom {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-8);
+  background:     var(--color-navy-800);
+  margin:         0 calc(-1 * var(--space-16)) calc(-1 * var(--space-32));
+  padding:        var(--space-16);
+  border-radius:  0 0 0 0;
+}
+
+/* Perfil */
+.sidebar__profile {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  gap:             var(--space-8);
+}
+
+.sidebar__avatar {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-8);
+  min-width:   0;
+}
+
+.sidebar__avatar-img {
+  width:         32px;
+  height:        32px;
+  border-radius: var(--radius-full);
+  object-fit:    cover;
+  flex-shrink:   0;
+}
+
+.sidebar__avatar-initials {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  width:           32px;
+  height:          32px;
+  border-radius:   var(--radius-full);
+  background:      var(--color-navy-700);
+  color:           var(--color-text-quartenary);
+  font-size:       12px;
+  font-weight:     700;
+  flex-shrink:     0;
+}
+
+.sidebar__profile-info {
+  display:        flex;
+  flex-direction: column;
+  min-width:      0;
+}
+
+.sidebar__profile-name {
+  font-size:     var(--text-body-s-size);
+  font-weight:   600;
+  color:         var(--color-text-quartenary);
+  white-space:   nowrap;
+  overflow:      hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar__profile-role {
+  font-size:   var(--text-body-xs-size);
+  color:       var(--color-navy-400);
+  white-space: nowrap;
+  overflow:    hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar__settings {
+  flex-shrink: 0;
+  background:  none;
+  border:      none;
+  cursor:      pointer;
+  color:       var(--color-navy-400);
+  padding:     var(--space-4);
+  border-radius: var(--radius-sm);
+  display:     flex;
+  align-items: center;
+  transition:  color 0.15s;
+}
+
+.sidebar__settings:hover {
+  color: var(--color-text-quartenary);
+}
+
+/* Botão colapsar */
+.sidebar__collapse-btn {
+  position:      absolute;
+  top:           50%;
+  right:         -12px;
+  transform:     translateY(-50%);
+  width:         24px;
+  height:        24px;
+  border-radius: var(--radius-full);
+  background:    var(--color-navy-800);
+  border:        var(--border-thin) solid var(--color-navy-700);
+  color:         var(--color-navy-400);
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+  cursor:        pointer;
+  transition:    color 0.15s, background 0.15s;
+  z-index:       10;
+}
+
+.sidebar__collapse-btn:hover {
+  background: var(--color-navy-700);
+  color:      var(--color-text-quartenary);
+}

@@ -1,0 +1,103 @@
+/* ─── Wrapper ────────────────────────────────────────────────────── */
+.table-wrap {
+  width:         100%;
+  overflow-x:    auto;
+  border-radius: var(--radius-md);
+}
+
+/* ─── Table ──────────────────────────────────────────────────────── */
+.table {
+  width:           100%;
+  border-collapse: collapse;
+  table-layout:    fixed;
+}
+
+/* ─── Head ───────────────────────────────────────────────────────── */
+.table__head {
+  background: var(--color-wl-300);
+}
+
+.table__th {
+  padding:     var(--space-16) var(--space-24);
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-s-size);
+  font-weight: 400;
+  color:       var(--color-text-primary);
+  white-space: nowrap;
+  overflow:    hidden;
+  text-overflow: ellipsis;
+}
+
+/* Primeira e última th com radius no topo */
+.table__head tr th:first-child { border-radius: var(--radius-md) 0 0 0; }
+.table__head tr th:last-child  { border-radius: 0 var(--radius-md) 0 0; }
+
+/* ─── Alinhamento ────────────────────────────────────────────────── */
+.table__th[data-align='left'],
+.table__td[data-align='left']   { text-align: left; }
+
+.table__th[data-align='center'],
+.table__td[data-align='center'] { text-align: center; }
+
+.table__th[data-align='right'],
+.table__td[data-align='right']  { text-align: right; }
+
+/* ─── Body ───────────────────────────────────────────────────────── */
+.table__body .table__row {
+  border-top: var(--border-thin) solid var(--color-bg-tertiary);
+  transition: background 0.12s;
+}
+
+.table__body .table__row:nth-child(odd)  { background: var(--color-bg-primary); }
+.table__body .table__row:nth-child(even) { background: var(--color-bg-secondary); }
+
+.table__row--clickable { cursor: pointer; }
+
+.table__row--clickable:hover {
+  background: var(--color-wl-300);
+}
+
+.table__td {
+  padding:     var(--space-12) var(--space-24);
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-s-size);
+  font-weight: 400;
+  color:       var(--color-text-primary);
+  white-space: nowrap;
+  overflow:    hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+/* ─── Célula de ações (ícones lado a lado) ───────────────────────── */
+.table-actions {
+  display:     flex;
+  align-items: center;
+  justify-content: center;
+  gap:         var(--space-8);
+}
+
+.table-action-btn {
+  background:    none;
+  border:        none;
+  cursor:        pointer;
+  padding:       var(--space-4);
+  border-radius: var(--radius-sm);
+  display:       flex;
+  align-items:   center;
+  transition:    opacity 0.12s;
+}
+
+.table-action-btn:hover { opacity: 0.7; }
+
+.table-action-btn--edit   { color: var(--color-success-medium); }
+.table-action-btn--delete { color: var(--color-error-medium); }
+
+/* ─── Estado vazio ───────────────────────────────────────────────── */
+.table__empty {
+  padding:    var(--space-32) var(--space-24);
+  text-align: center;
+  font-size:  var(--text-body-s-size);
+  color:      var(--color-text-secondary);
+  background: var(--color-bg-tertiary);
+}

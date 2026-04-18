@@ -1,0 +1,32 @@
+.stat-card-section { padding: var(--space-48); max-width: 1200px; }
+
+.sc-demo-row {
+  display:     flex;
+  flex-wrap:   wrap;
+  gap:         var(--space-32);
+  align-items: flex-start;
+}
+
+.sc-demo-item {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            var(--space-12);
+}
+
+.sc-demo-label {
+  font-size:   11px;
+  font-weight: 600;
+  color:       var(--color-text-secondary);
+  font-family: monospace;
+}
+
+.sc-dashboard-grid {
+  display:               grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:                   var(--space-16);
+}
+
+.sc-dashboard-grid .stat-card {
+  width: 100%;
+}

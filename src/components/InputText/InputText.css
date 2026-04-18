@@ -1,0 +1,108 @@
+/* ─── Container ─────────────────────────────────────────────────── */
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+/* ─── Label ─────────────────────────────────────────────────────── */
+.input-field__label {
+  font-size: var(--text-body-s-size);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.input-field--disabled .input-field__label {
+  color: var(--color-disabled-light);
+}
+
+/* ─── Wrapper (border container) ────────────────────────────────── */
+.input-field__wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-text-primary);
+  border-radius: var(--radius-md);
+  background: transparent;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Focus — box-shadow não afeta layout */
+.input-field__wrapper:focus-within,
+.input-field--focus-demo .input-field__wrapper {
+  border-color: var(--color-focus-on-light);
+  box-shadow: 0 0 0 1px var(--color-focus-on-light);
+}
+
+/* Disabled */
+.input-field--disabled .input-field__wrapper {
+  border-color: var(--color-disabled-light);
+  pointer-events: none;
+  opacity: var(--opacity-disabled);
+}
+
+/* ─── Input element ─────────────────────────────────────────────── */
+.input-field__input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-family-body);
+  color: var(--color-text-secondary);
+}
+
+.input-field__input::placeholder {
+  color: var(--color-text-primary);
+  opacity: 0.5;
+}
+
+/* Size M */
+.input-field--m .input-field__wrapper { min-height: 46px; }
+.input-field--m .input-field__input   { font-size: var(--text-body-s-size); padding: 0 8px; }
+
+/* Size P */
+.input-field--p .input-field__wrapper { min-height: 30px; }
+.input-field--p .input-field__input   { font-size: var(--text-body-xs-size); padding: 0 8px; }
+
+/* ─── Right icon button ─────────────────────────────────────────── */
+.input-field__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.input-field__icon-btn:hover { opacity: 1; }
+
+/* ─── Helper text ───────────────────────────────────────────────── */
+.input-field__helper {
+  font-size: var(--text-body-xs-size);
+  color: var(--color-text-secondary);
+  line-height: 1;
+}
+
+.input-field--disabled .input-field__helper {
+  color: var(--color-disabled-light);
+}
+
+/* ─── Error / Success message ───────────────────────────────────── */
+.input-field__message {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-body-xs-size);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.input-field__message--error   { color: var(--color-error-medium);   }
+.input-field__message--success { color: var(--color-success-medium); }

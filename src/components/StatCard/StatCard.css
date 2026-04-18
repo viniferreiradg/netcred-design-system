@@ -1,0 +1,77 @@
+/* ─── Card ──────────────────────────────────────────────────────── */
+.stat-card {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-8);
+  padding:        var(--space-16);
+  background:     var(--color-wl-300);
+  border-radius:  var(--radius-xl);
+  width:          fit-content;
+}
+
+/* ─── Bolha do ícone ────────────────────────────────────────────── */
+.stat-card__icon-bubble {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  width:           32px;
+  height:          32px;
+  padding:         var(--space-4);
+  background:      var(--color-text-quartenary);
+  border-radius:   var(--radius-md);
+  flex-shrink:     0;
+}
+
+.stat-card__icon {
+  color: var(--color-text-primary);
+}
+
+/* ─── Linha inferior ────────────────────────────────────────────── */
+.stat-card__bottom {
+  display:     flex;
+  align-items: flex-end;
+  gap:         var(--space-8);
+}
+
+.stat-card__number {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-4);
+}
+
+/* Badge de trend */
+.stat-card__trend {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  width:           16px;
+  height:          16px;
+  border-radius:   var(--radius-full);
+  font-family:     var(--font-family-body);
+  font-size:       var(--text-body-xs-size);
+  font-weight:     700;
+  color:           var(--color-text-quartenary);
+  flex-shrink:     0;
+}
+
+.stat-card__trend--up   { background: var(--color-success-medium); }
+.stat-card__trend--down { background: var(--color-error-medium); }
+
+/* Valor numérico */
+.stat-card__value {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-h6-size);
+  font-weight: 700;
+  color:       var(--color-text-primary);
+  line-height: 1;
+}
+
+/* Label descritivo */
+.stat-card__label {
+  font-family: var(--font-family-body);
+  font-size:   var(--text-body-s-size);
+  font-weight: 400;
+  color:       var(--color-text-primary);
+  line-height: 1;
+  white-space: nowrap;
+}

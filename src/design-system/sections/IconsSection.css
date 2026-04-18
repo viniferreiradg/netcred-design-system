@@ -1,0 +1,40 @@
+.icons-section { padding: var(--space-48); max-width: 1200px; }
+
+.icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  width: 96px;
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: white;
+  border: var(--border-thin) solid var(--color-bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+}
+
+.icon-box--p {
+  width: 36px;
+  height: 36px;
+}
+
+.icon-name {
+  font-size: 10px;
+  color: var(--color-text-brand);
+  text-align: center;
+  word-break: break-word;
+  line-height: 1.3;
+}

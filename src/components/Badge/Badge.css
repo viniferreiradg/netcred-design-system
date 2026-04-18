@@ -1,0 +1,79 @@
+/* ─── Base ──────────────────────────────────────────────────────── */
+.badge {
+  display:       inline-flex;
+  align-items:   center;
+  justify-content: center;
+  padding:       4px 12px;
+  border-radius: var(--radius-full);
+  font-family:   var(--font-family-body);
+  font-weight:   400;
+  white-space:   nowrap;
+  line-height:   1;
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────── */
+.badge--sm {
+  height:    20px;
+  font-size: 12px;
+}
+
+.badge--md {
+  height:    24px;
+  font-size: 12px;
+}
+
+/* ─── Primary ───────────────────────────────────────────────────── */
+.badge--primary {
+  background: var(--color-bg-sidebar);
+  color:      var(--color-text-quartenary);
+}
+
+/* ─── Neutral ───────────────────────────────────────────────────── */
+/* light — tons ambar quentes */
+.badge--neutral.badge--light,
+.badge--neutral:not(.badge--dark) {
+  background: var(--color-wl-300);
+  color:      var(--color-wl-700);
+}
+
+/* dark — fundo navy médio, texto claro */
+.badge--neutral.badge--dark {
+  background: var(--color-navy-600);
+  color:      var(--color-text-quartenary);
+}
+
+/* md — versão neutra sobre fundo branco */
+.badge--neutral.badge--md {
+  background: var(--color-text-quartenary);
+  color:      var(--color-text-primary);
+}
+
+/* ─── Success ───────────────────────────────────────────────────── */
+.badge--success.badge--light,
+.badge--success:not(.badge--dark) {
+  background: var(--color-success-lightest);
+  color:      var(--color-success-medium);
+}
+
+.badge--success.badge--dark {
+  background: var(--color-success-dark);
+  color:      var(--color-success-lightest);
+}
+
+/* ─── Warning ───────────────────────────────────────────────────── */
+.badge--warning {
+  background: var(--color-warning-lightest);
+  color:      var(--color-warning-dark);
+}
+
+/* ─── Danger ────────────────────────────────────────────────────── */
+.badge--danger {
+  background: var(--color-error-lightest);
+  color:      var(--color-error-medium);
+}
+
+/* ─── Info ──────────────────────────────────────────────────────── */
+.badge--info {
+  background: var(--color-info-lightest);
+  color:      var(--color-info-medium);
+}

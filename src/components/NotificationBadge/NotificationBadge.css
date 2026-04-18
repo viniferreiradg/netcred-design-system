@@ -1,0 +1,47 @@
+/* =============================================
+   NOTIFICATION BADGE
+   16×16px · border-radius full
+   ============================================= */
+
+.notif-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.notif-badge__label {
+  font-family: var(--font-family-body);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-wl-50);
+}
+
+/* =====================
+   VARIANTES — fundo
+   ===================== */
+
+/* default, +9, less → vermelho */
+.notif-badge--default,
+.notif-badge--plus9,
+.notif-badge--less {
+  background: var(--color-error-medium);   /* #d63b3b */
+  color: var(--color-wl-50);
+}
+
+/* plus → verde */
+.notif-badge--plus {
+  background: var(--color-success-medium); /* #1a9655 */
+  color: var(--color-wl-50);
+}
+
+/* minimize → bege */
+.notif-badge--minimize {
+  background: var(--color-wl-300);         /* #dcb895 */
+  color: var(--color-wl-50);
+}

@@ -1,0 +1,85 @@
+.ds-page { display: flex; min-height: 100vh; }
+
+/* ─── Sidebar ───────────────────────────────────────────────────── */
+.ds-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--color-bg-sidebar);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: var(--space-32) var(--space-20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.ds-sidebar-header { }
+
+.ds-sidebar-title {
+  display: block;
+  font-size: var(--text-subtitle-m-size);
+  font-weight: 700;
+  color: var(--color-text-quartenary);
+}
+
+.ds-sidebar-sub {
+  display: block;
+  font-size: var(--text-body-xs-size);
+  color: var(--color-navy-300);
+  margin-top: var(--space-4);
+}
+
+/* ─── Nav ───────────────────────────────────────────────────────── */
+.ds-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+}
+
+.ds-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 2px);
+}
+
+.ds-nav-group-label {
+  font-size: var(--text-body-xs-size);
+  font-weight: 700;
+  color: var(--color-navy-400);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 var(--space-12);
+  margin-bottom: var(--space-4);
+}
+
+.ds-nav-item {
+  display: block;
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-md);
+  font-size: var(--text-body-s-size);
+  font-weight: 500;
+  color: var(--color-navy-300);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ds-nav-item:hover {
+  background: var(--color-navy-700);
+  color: var(--color-text-quartenary);
+}
+
+.ds-nav-item--active {
+  background: var(--color-navy-700);
+  color: var(--color-text-quartenary);
+  font-weight: 600;
+}
+
+/* ─── Main ──────────────────────────────────────────────────────── */
+.ds-main {
+  flex: 1;
+  background: var(--color-bg-primary);
+  overflow-y: auto;
+  min-height: 100vh;
+}

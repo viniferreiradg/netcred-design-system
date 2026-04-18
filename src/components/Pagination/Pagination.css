@@ -1,0 +1,91 @@
+/* ─── Container ─────────────────────────────────────────────────── */
+.pagination {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-8);
+}
+
+/* ─── Item base ─────────────────────────────────────────────────── */
+.pagination__item {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  width:           32px;
+  height:          32px;
+  border-radius:   var(--radius-md);
+  border:          none;
+  font-family:     var(--font-family-body);
+  font-size:       var(--text-body-s-size);
+  font-weight:     400;
+  cursor:          pointer;
+  transition:      background 0.12s, box-shadow 0.12s;
+  flex-shrink:     0;
+}
+
+/* ─── Light ─────────────────────────────────────────────────────── */
+.pagination__item--light {
+  background: var(--color-bg-tertiary);
+  color:      var(--color-text-primary);
+}
+
+.pagination__item--light:hover:not(:disabled):not(.pagination__item--ellipsis) {
+  background: var(--color-wl-300);
+}
+
+.pagination__item--light:active:not(:disabled) {
+  background: var(--color-wl-400);
+}
+
+.pagination__item--light:focus-visible {
+  outline:    none;
+  background: var(--color-bg-tertiary);
+  box-shadow: 0 0 0 2px var(--color-bg-sidebar);
+}
+
+.pagination__item--light.pagination__item--active {
+  background: var(--color-wl-300);
+  font-weight: 600;
+}
+
+.pagination__item--light.pagination__item--disabled {
+  background: var(--color-wl-300);
+  color:      var(--color-wl-500);
+  cursor:     not-allowed;
+}
+
+/* ─── Dark ──────────────────────────────────────────────────────── */
+.pagination__item--dark {
+  background: var(--color-navy-700);
+  color:      var(--color-text-quartenary);
+}
+
+.pagination__item--dark:hover:not(:disabled):not(.pagination__item--ellipsis) {
+  background: var(--color-navy-600);
+}
+
+.pagination__item--dark:active:not(:disabled) {
+  background: var(--color-navy-500);
+}
+
+.pagination__item--dark:focus-visible {
+  outline:    none;
+  background: var(--color-navy-700);
+  box-shadow: 0 0 0 2px var(--color-text-quartenary);
+}
+
+.pagination__item--dark.pagination__item--active {
+  background:  var(--color-navy-600);
+  font-weight: 600;
+}
+
+.pagination__item--dark.pagination__item--disabled {
+  background: var(--color-navy-600);
+  color:      var(--color-text-primary);
+  cursor:     not-allowed;
+}
+
+/* ─── Ellipsis ──────────────────────────────────────────────────── */
+.pagination__item--ellipsis {
+  cursor:  default;
+  pointer-events: none;
+}

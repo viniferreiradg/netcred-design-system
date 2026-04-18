@@ -1,0 +1,11 @@
+.table-section { padding: var(--space-48); max-width: 1200px; }
+
+.table-section code {
+  font-family: monospace;
+  font-size:   11px;
+  color:       var(--color-text-brand);
+}
+
+.table-detail-btn {
+  color: var(--color-text-primary);
+}

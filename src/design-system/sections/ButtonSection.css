@@ -1,0 +1,83 @@
+.button-section { padding: var(--space-48); max-width: 1200px; }
+
+
+.state-header {
+  display: flex;
+  gap: var(--space-24);
+  margin-bottom: var(--space-16);
+  padding-left: 160px;
+}
+.state-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100px;
+  text-align: center;
+}
+
+.btn-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-24);
+  margin-bottom: var(--space-16);
+}
+.btn-row-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  width: 140px;
+  flex-shrink: 0;
+  font-family: monospace;
+}
+.btn-row-items {
+  display: flex;
+  gap: var(--space-24);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Demo states for showcase — light */
+.btn--hover-demo {
+  background: var(--color-navy-600) !important;
+}
+.btn--focus-demo {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-info-medium) !important;
+}
+
+/* Demo states for showcase — dark */
+.btn--hover-demo--dark {
+  background: var(--color-navy-500) !important;
+}
+.btn--focus-demo--dark {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-wl-50) !important;
+}
+
+/* Demo states for showcase — secondary light */
+.btn--hover-demo--sec-light {
+  background: var(--color-bg-secondary) !important;
+}
+.btn--focus-demo--sec-light {
+  border-color: var(--color-info-medium) !important;
+  border-width: 2px !important;
+}
+
+/* Demo states for showcase — secondary dark */
+.btn--hover-demo--sec-dark {
+  background: var(--color-navy-600) !important;
+}
+.btn--focus-demo--sec-dark {
+  border-color: var(--color-wl-50) !important;
+  box-shadow: none !important;
+}
+
+.btn-interactive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+  padding: var(--space-24);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+}

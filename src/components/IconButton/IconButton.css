@@ -1,0 +1,144 @@
+/* =============================================
+   ICON BUTTON — M (44×44) e P (36×36)
+   ============================================= */
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+  flex-shrink: 0;
+  font-family: var(--font-family-body);
+}
+
+/* --- SIZES --- */
+.icon-btn--m { width: 44px; height: 44px; }
+.icon-btn--p { width: 36px; height: 36px; }
+
+/* =====================
+   FILL — LIGHT
+   ===================== */
+.icon-btn--fill.icon-btn--light {
+  background: var(--color-bg-sidebar);   /* #001749 */
+  border-radius: var(--radius-md);
+  color: var(--color-wl-50);             /* ícone branco */
+  box-shadow: 0 0 2px rgba(242, 116, 76, 0.07);
+}
+.icon-btn--fill.icon-btn--light:hover:not(:disabled) {
+  background: var(--color-navy-600);
+}
+.icon-btn--fill.icon-btn--light:active:not(:disabled),
+.icon-btn--fill.icon-btn--light.icon-btn--pressed {
+  background: var(--color-navy-500);
+}
+.icon-btn--fill.icon-btn--light:focus-visible:not(:disabled) {
+  box-shadow: 0 0 0 2px var(--color-bg-sidebar);
+}
+.icon-btn--fill.icon-btn--light:disabled,
+.icon-btn--fill.icon-btn--light.icon-btn--disabled {
+  background: var(--color-disabled-lightest);
+  color: var(--color-disabled-medium);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* =====================
+   OUTLINE — LIGHT
+   ===================== */
+.icon-btn--outline.icon-btn--light {
+  background: var(--color-bg-primary);   /* #f9f3ec */
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-bg-sidebar);
+  color: var(--color-bg-sidebar);        /* ícone navy */
+  box-shadow: 0 0 2px rgba(242, 116, 76, 0.07);
+}
+.icon-btn--outline.icon-btn--light:hover:not(:disabled) {
+  background: var(--color-bg-secondary);
+}
+.icon-btn--outline.icon-btn--light:active:not(:disabled),
+.icon-btn--outline.icon-btn--light.icon-btn--pressed {
+  background: var(--color-bg-tertiary);
+}
+.icon-btn--outline.icon-btn--light:focus-visible:not(:disabled) {
+  background: var(--color-bg-primary);
+  border-color: var(--color-bg-sidebar);
+}
+.icon-btn--outline.icon-btn--light:disabled,
+.icon-btn--outline.icon-btn--light.icon-btn--disabled {
+  background: var(--color-bg-primary);
+  border-color: var(--color-bg-tertiary);
+  color: var(--color-disabled-medium);
+  cursor: not-allowed;
+}
+
+/* =====================
+   ICON ONLY — LIGHT
+   ===================== */
+.icon-btn--icon-only.icon-btn--light {
+  background: transparent;
+  border-radius: var(--radius-md);
+  color: var(--color-bg-sidebar);        /* ícone navy */
+}
+.icon-btn--icon-only.icon-btn--light:hover:not(:disabled) {
+  background: var(--color-bg-secondary);
+}
+.icon-btn--icon-only.icon-btn--light:active:not(:disabled),
+.icon-btn--icon-only.icon-btn--light.icon-btn--pressed {
+  background: var(--color-bg-tertiary);
+}
+.icon-btn--icon-only.icon-btn--light:focus-visible:not(:disabled) {
+  box-shadow: 0 0 0 2px var(--color-bg-sidebar);
+}
+.icon-btn--icon-only.icon-btn--light:disabled,
+.icon-btn--icon-only.icon-btn--light.icon-btn--disabled {
+  color: var(--color-disabled-medium);
+  cursor: not-allowed;
+}
+
+/* =====================
+   CIRCLE — LIGHT
+   ===================== */
+.icon-btn--circle.icon-btn--light,
+.icon-btn--circle-notification.icon-btn--light {
+  background: var(--color-bg-sidebar);
+  border-radius: var(--radius-full);
+  color: var(--color-wl-50);
+  box-shadow: 0 0 2px rgba(242, 116, 76, 0.07);
+}
+.icon-btn--circle.icon-btn--light:hover:not(:disabled),
+.icon-btn--circle-notification.icon-btn--light:hover:not(:disabled) {
+  background: var(--color-navy-600);
+}
+.icon-btn--circle.icon-btn--light:active:not(:disabled),
+.icon-btn--circle.icon-btn--light.icon-btn--pressed,
+.icon-btn--circle-notification.icon-btn--light:active:not(:disabled),
+.icon-btn--circle-notification.icon-btn--light.icon-btn--pressed {
+  background: var(--color-navy-500);
+}
+.icon-btn--circle.icon-btn--light:focus-visible:not(:disabled),
+.icon-btn--circle-notification.icon-btn--light:focus-visible:not(:disabled) {
+  box-shadow: 0 0 0 2px var(--color-bg-sidebar);
+}
+.icon-btn--circle.icon-btn--light:disabled,
+.icon-btn--circle.icon-btn--light.icon-btn--disabled,
+.icon-btn--circle-notification.icon-btn--light:disabled,
+.icon-btn--circle-notification.icon-btn--light.icon-btn--disabled {
+  background: var(--color-disabled-lightest);
+  color: var(--color-disabled-medium);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* =====================
+   NOTIFICATION BADGE WRAPPER
+   ===================== */
+.icon-btn__badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  pointer-events: none;
+}

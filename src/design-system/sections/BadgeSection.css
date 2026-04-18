@@ -1,0 +1,96 @@
+.badge-section { padding: var(--space-48); max-width: 1200px; }
+
+/* ─── Grid de variantes ─────────────────────────────────────────── */
+.badge-grid {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-2);
+  border-radius:  var(--radius-lg);
+  overflow:       hidden;
+  border:         var(--border-thin) solid var(--color-bg-tertiary);
+}
+
+.badge-row {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-24);
+  padding:     var(--space-24) var(--space-32);
+  background:  var(--color-bg-primary);
+}
+
+.badge-row--dark {
+  background: var(--color-bg-sidebar);
+}
+
+.badge-row--light {
+  background:    var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  border:        var(--border-thin) solid var(--color-bg-tertiary);
+}
+
+.badge-row-label {
+  width:         80px;
+  flex-shrink:   0;
+  font-size:     11px;
+  font-weight:   700;
+  color:         var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-row-label--dark {
+  color: var(--color-navy-400);
+}
+
+.badge-cell {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            var(--space-8);
+}
+
+.badge-cell-name {
+  font-size:  10px;
+  color:      var(--color-text-secondary);
+  font-family: monospace;
+}
+
+.badge-cell-name--dark {
+  color: var(--color-navy-400);
+}
+
+/* ─── Exemplos de uso ───────────────────────────────────────────── */
+.badge-examples {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-16);
+}
+
+.badge-example-row {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-24);
+  padding:     var(--space-16) var(--space-24);
+  background:  var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.badge-example-label {
+  font-size:   var(--text-body-s-size);
+  color:       var(--color-text-secondary);
+  width:       160px;
+  flex-shrink: 0;
+}
+
+.badge-example-chips {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-8);
+  flex-wrap:   wrap;
+}
+
+.badge-example-chips--dark {
+  background:    var(--color-bg-sidebar);
+  padding:       var(--space-12) var(--space-16);
+  border-radius: var(--radius-md);
+}

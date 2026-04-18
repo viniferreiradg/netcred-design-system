@@ -1,0 +1,145 @@
+/* ─── Base layout ──────────────────────────────────────────────── */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--radius-full);
+  outline: none;
+}
+
+.toggle--disabled {
+  cursor: not-allowed;
+}
+
+/* Hide native checkbox */
+.toggle__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ─── Track ────────────────────────────────────────────────────── */
+.toggle__track {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-navy-300);
+  transition: background 0.18s ease;
+}
+
+/* Thumb */
+.toggle__thumb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border-radius: var(--radius-full);
+  transition: left 0.18s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* ─── Size M ───────────────────────────────────────────────────── */
+.toggle--m .toggle__track {
+  width: 44px;
+  height: 24px;
+}
+
+.toggle--m .toggle__thumb {
+  width: 18px;
+  height: 18px;
+  left: 3px;
+}
+
+.toggle--m .toggle__label {
+  font-size: var(--text-body-s-size);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  min-width: 22px;
+}
+
+/* ─── Size P ───────────────────────────────────────────────────── */
+.toggle--p .toggle__track {
+  width: 36px;
+  height: 20px;
+}
+
+.toggle--p .toggle__thumb {
+  width: 14px;
+  height: 14px;
+  left: 3px;
+}
+
+.toggle--p .toggle__label {
+  font-size: var(--text-body-xs-size);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  min-width: 18px;
+}
+
+/* ─── OFF states ───────────────────────────────────────────────── */
+
+/* Hover (native) */
+.toggle:not(.toggle--disabled):hover .toggle__track,
+.toggle--hover .toggle__track {
+  background: var(--color-navy-200);
+}
+
+/* Pressed (demo only) */
+.toggle--pressed .toggle__track {
+  background: var(--color-navy-400);
+}
+
+/* Disabled */
+.toggle--disabled .toggle__track {
+  background: var(--color-navy-100);
+  opacity: var(--opacity-disabled);
+}
+
+/* Focus (native) */
+.toggle:not(.toggle--disabled):focus-within,
+.toggle--focus {
+  box-shadow: 0 0 0 2px var(--color-navy-700);
+}
+
+/* ─── ON states — thumb moves right ───────────────────────────── */
+.toggle--m .toggle__input:checked ~ .toggle__track .toggle__thumb,
+.toggle--m.toggle--checked .toggle__track .toggle__thumb {
+  left: calc(44px - 18px - 3px);
+}
+
+.toggle--p .toggle__input:checked ~ .toggle__track .toggle__thumb,
+.toggle--p.toggle--checked .toggle__track .toggle__thumb {
+  left: calc(36px - 14px - 3px);
+}
+
+/* On track color */
+.toggle__input:checked ~ .toggle__track,
+.toggle--checked .toggle__track {
+  background: var(--color-navy-700);
+}
+
+/* On hover */
+.toggle:not(.toggle--disabled):hover .toggle__input:checked ~ .toggle__track,
+.toggle--hover.toggle--checked .toggle__track {
+  background: var(--color-navy-600);
+}
+
+/* On pressed */
+.toggle--pressed.toggle--checked .toggle__track {
+  background: var(--color-navy-800);
+}
+
+/* On disabled */
+.toggle--disabled .toggle__input:checked ~ .toggle__track {
+  background: var(--color-navy-100);
+}
+
+/* On focus */
+.toggle:not(.toggle--disabled):focus-within.toggle--on,
+.toggle--focus.toggle--checked {
+  box-shadow: 0 0 0 2px var(--color-navy-700);
+}

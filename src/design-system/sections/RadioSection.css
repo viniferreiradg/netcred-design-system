@@ -1,0 +1,52 @@
+.radio-section { padding: var(--space-48); max-width: 800px; }
+
+.radio-grid { display: flex; flex-direction: column; gap: var(--space-16); }
+
+.radio-grid__header,
+.radio-grid__row {
+  display: grid;
+  grid-template-columns: 48px repeat(5, 1fr);
+  align-items: center;
+}
+
+.radio-grid__state-label {
+  text-align: center;
+  font-size: var(--text-body-xs-size);
+  font-weight: 700;
+  color: var(--color-text-brand);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.radio-grid__value-label {
+  font-size: var(--text-body-xs-size);
+  font-weight: 700;
+  color: var(--color-text-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.radio-grid__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-8) 0;
+}
+
+/* Group example */
+.radio-group-example {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.radio-group-example__title {
+  font-size: var(--text-body-s-size);
+  color: var(--color-text-secondary);
+}
+
+.radio-group-example__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}

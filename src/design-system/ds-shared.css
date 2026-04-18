@@ -1,0 +1,28 @@
+/* Shared design system utility classes
+   Imported by DSLayout — available in every page */
+
+.ds-section { margin-bottom: var(--space-64); }
+
+.ds-section-title {
+  font-size: var(--text-h5-size);
+  font-weight: var(--text-h5-weight);
+  color: var(--color-text-primary);
+  border-bottom: var(--border-medium) solid var(--color-bg-tertiary);
+  padding-bottom: var(--space-12);
+  margin-bottom: var(--space-32);
+}
+
+.ds-section-title--light { color: var(--color-text-quartenary); border-color: var(--color-navy-600); }
+
+.ds-section-sub {
+  font-size: var(--text-body-m-size);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-24);
+  margin-top: calc(-1 * var(--space-24));
+}
+
+.ds-section--dark {
+  background: var(--color-bg-sidebar);
+  padding: var(--space-32);
+  border-radius: var(--radius-lg);
+}

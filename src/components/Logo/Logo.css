@@ -1,0 +1,14 @@
+.logo {
+  display:    block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Size M — versão principal */
+.logo--m      { width: 160px; }
+
+/* Size P — versão compacta */
+.logo--p      { width: 96px; }
+
+/* Símbolo isolado — quadrado */
+.logo--symbol { width: 32px; height: auto; }

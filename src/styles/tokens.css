@@ -1,0 +1,234 @@
+/* ============================================
+   NETCRED DESIGN SYSTEM — CSS TOKENS
+   Extracted from Figma: Projeto NetCred
+   Source of truth: CLAUDE.md
+   Last sync: 2026-04-17
+   ============================================ */
+
+:root {
+
+  /* --- FONTS --- */
+  --font-family-body: 'Montserrat', sans-serif;
+  --font-family-head: 'Montserrat', sans-serif;
+
+  /* --- BRAND COLORS --- */
+  --color-brand-01-navy:            #122e4a; /* Brand/01 Venice Blue 900 */
+  --color-brand-02-white-linen:     #fbf3ec; /* Brand/02 Ambar 50 */
+  --color-brand-03-navy-500:        #008aad; /* Brand/03 Boston Blue 600 */
+  --color-brand-04-white-linen-300: #c88c38; /* Brand/04 Ambar 400 */
+
+  /* --- BASE / NAVY (Venice Blue) --- */
+  --color-navy-50:  #ebf0fb;
+  --color-navy-100: #d1ddef;
+  --color-navy-200: #b8cce6;
+  --color-navy-300: #8caec9;
+  --color-navy-400: #6090b8;
+  --color-navy-500: #4a7ca8;
+  --color-navy-600: #3a6b94;
+  --color-navy-700: #2b5478;
+  --color-navy-800: #1e4060;
+  --color-navy-900: #122e4a;
+  --color-navy-950: #091c30;
+
+  /* --- BASE / WHITE LINEN (Ambar) --- */
+  --color-wl-50:  #fbf3ec;
+  --color-wl-100: #f4e3cf;
+  --color-wl-200: #e8cba8;
+  --color-wl-300: #d4a96c;
+  --color-wl-400: #c88c38;
+  --color-wl-500: #be7418;
+  --color-wl-600: #b86010;
+  --color-wl-700: #9e4010;
+  --color-wl-800: #86280a;
+  --color-wl-900: #6a1c0c;
+  --color-wl-950: #2c0a06;
+
+  /* --- BASE / GREEN --- */
+  --color-green-50:  #f0f9f3;
+  --color-green-100: #d9f2e1;
+  --color-green-200: #b7e3c7;
+  --color-green-300: #87cea5;
+  --color-green-400: #4faf7b;
+  --color-green-500: #339664;
+  --color-green-600: #23784f;
+  --color-green-700: #1c6041;
+  --color-green-800: #184d35;
+  --color-green-900: #153f2c;
+  --color-green-950: #0b2319;
+
+  /* --- BASE / RED --- */
+  --color-red-50:  #fcf4f4;
+  --color-red-100: #fae6e6;
+  --color-red-200: #f6d2d2;
+  --color-red-300: #efb2b2;
+  --color-red-400: #e48585;
+  --color-red-500: #d45a5a;
+  --color-red-600: #c04242;
+  --color-red-700: #a13434;
+  --color-red-800: #862e2e;
+  --color-red-900: #702c2c;
+  --color-red-950: #3c1313;
+
+  /* --- BASE / BLUE --- */
+  --color-blue-50:  #eaf2ff;
+  --color-blue-100: #c5dbff;
+  --color-blue-200: #9dc3ff;
+  --color-blue-300: #6fa6ff;
+  --color-blue-400: #4a8eff;
+  --color-blue-500: #2378ff;
+  --color-blue-600: #1a5ed4;
+  --color-blue-700: #1246aa;
+  --color-blue-800: #0b3080;
+  --color-blue-900: #051c55;
+  --color-blue-950: #000f2e;
+
+  /* --- BASE / AMBER --- */
+  --color-amber-50:  #fbf3ec;
+  --color-amber-100: #f4e3cf;
+  --color-amber-200: #e8cba8;
+  --color-amber-300: #d4a96c;
+  --color-amber-400: #c88c38;
+  --color-amber-500: #be7418;
+  --color-amber-600: #b86010;
+  --color-amber-700: #9e4010;
+  --color-amber-800: #86280a;
+  --color-amber-900: #6a1c0c;
+  --color-amber-950: #2c0a06;
+
+  /* --- BASE / BOSTON BLUE (novo) --- */
+  --color-boston-50:  #ebfeff;
+  --color-boston-100: #cdfaff;
+  --color-boston-200: #a1f5ff;
+  --color-boston-300: #60ebff;
+  --color-boston-400: #18d9f8;
+  --color-boston-500: #00bcde;
+  --color-boston-600: #008aad;
+  --color-boston-700: #087696;
+  --color-boston-800: #10607a;
+  --color-boston-900: #124f67;
+  --color-boston-950: #053447;
+
+  /* --- ALIAS / TEXT --- */
+  --color-text-primary:    #1e4060;
+  --color-text-secondary:  #3a6b94;
+  --color-text-brand:      #3a6b94;
+  --color-text-tertiary:   #e8cba8;
+  --color-text-quartenary: #fbf3ec;
+
+  /* --- ALIAS / BACKGROUND --- */
+  --color-bg-brand:     #3a6b94;
+  --color-bg-primary:   #fbf3ec;
+  --color-bg-secondary: #f4e3cf;
+  --color-bg-tertiary:  #e8cba8;
+  --color-bg-sidebar:   #122e4a;
+
+  /* --- ALIAS / SYSTEM --- */
+  --color-success-lightest: #d9f2e1;
+  --color-success-light:    #87cea5;
+  --color-success-medium:   #339664;
+  --color-success-dark:     #1c6041;
+
+  --color-error-lightest: #fae6e6;
+  --color-error-light:    #efb2b2;
+  --color-error-medium:   #d45a5a;
+  --color-error-dark:     #a13434;
+
+  --color-warning-lightest: #e8cba8;
+  --color-warning-light:    #d4a96c;
+  --color-warning-medium:   #c88c38;
+  --color-warning-dark:     #be7418;
+
+  --color-info-lightest: #c5dbff;
+  --color-info-light:    #6fa6ff;
+  --color-info-medium:   #2378ff;
+  --color-info-dark:     #1246aa;
+
+  --color-disabled-lightest: #f4e3cf;
+  --color-disabled-light:    #e8cba8;
+  --color-disabled-medium:   #d4a96c;
+
+  --color-focus-on-light: #8caec9;
+  --color-focus-on-dark:  #4a7ca8;
+
+  /* --- SPACING --- */
+  --space-0:   0px;
+  --space-4:   4px;
+  --space-8:   8px;
+  --space-12:  12px;
+  --space-16:  16px;
+  --space-20:  20px;
+  --space-24:  24px;
+  --space-32:  32px;
+  --space-40:  40px;
+  --space-48:  48px;
+  --space-64:  64px;
+  --space-80:  80px;
+  --space-96:  96px;
+  --space-128: 128px;
+
+  /* --- BORDER RADIUS --- */
+  --radius-none: 0px;
+  --radius-xs:   2px;
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  24px;
+  --radius-full: 9999px;
+
+  /* --- BORDER WIDTH --- */
+  --border-thin:   1px;
+  --border-medium: 2px;
+  --border-thick:  4px;
+
+  /* --- OPACITY --- */
+  --opacity-disabled: 0.4;
+  --opacity-hover:    0.88;
+  --opacity-overlay:  0.6;
+
+  /* --- TYPOGRAPHY — HEADING --- */
+  --text-h1-xl-size:   128px; --text-h1-xl-weight: 700; --text-h1-xl-lh: 1;
+  --text-h1-l-size:     96px; --text-h1-l-weight:  700; --text-h1-l-lh:  1;
+  --text-h1-m-size:     72px; --text-h1-m-weight:  700; --text-h1-m-lh:  1;
+  --text-h2-size:       56px; --text-h2-weight:    700; --text-h2-lh:    1;
+  --text-h3-size:       48px; --text-h3-weight:    700; --text-h3-lh:    1;
+  --text-h4-size:       40px; --text-h4-weight:    700; --text-h4-lh:    1;
+  --text-h5-size:       32px; --text-h5-weight:    700; --text-h5-lh:    1;
+  --text-h6-size:       24px; --text-h6-weight:    700; --text-h6-lh:    1;
+
+  /* --- TYPOGRAPHY — SUBTITLE --- */
+  --text-subtitle-xl-size: 20px; --text-subtitle-xl-weight: 500;
+  --text-subtitle-l-size:  18px; --text-subtitle-l-weight:  500;
+  --text-subtitle-m-size:  16px; --text-subtitle-m-weight:  500;
+  --text-subtitle-s-size:  14px; --text-subtitle-s-weight:  500;
+
+  /* --- TYPOGRAPHY — BODY --- */
+  --text-body-xxxl-size: 32px; --text-body-xxxl-weight: 400; --text-body-xxxl-lh: 1;
+  --text-body-xxl-size:  24px; --text-body-xxl-weight:  400; --text-body-xxl-lh:  1;
+  --text-body-xl-size:   20px; --text-body-xl-weight:   400; --text-body-xl-lh:   1;
+  --text-body-l-size:    18px; --text-body-l-weight:    400; --text-body-l-lh:    1.5;
+  --text-body-m-size:    16px; --text-body-m-weight:    400; --text-body-m-lh:    1.3;
+  --text-body-s-size:    14px; --text-body-s-weight:    400; --text-body-s-lh:    1;
+  --text-body-xs-size:   12px; --text-body-xs-weight:   400; --text-body-xs-lh:   1;
+  --text-body-xxs-size:  10px; --text-body-xxs-weight:  400; --text-body-xxs-lh:  1;
+
+  /* --- TYPOGRAPHY — CAPTION --- */
+  --text-caption-m-size: 18px; --text-caption-m-weight: 700; --text-caption-m-spacing: 3px;
+  --text-caption-s-size: 14px; --text-caption-s-weight: 700; --text-caption-s-spacing: 2px;
+
+  /* --- TYPOGRAPHY — BUTTON --- */
+  --text-btn-xl-size: 22px; --text-btn-xl-weight: 600;
+  --text-btn-l-size:  18px; --text-btn-l-weight:  600;
+  --text-btn-m-size:  14px; --text-btn-m-weight:  600;
+  --text-btn-s-size:  12px; --text-btn-s-weight:  600;
+}
+
+/* --- RESET & BASE --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-family-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+}

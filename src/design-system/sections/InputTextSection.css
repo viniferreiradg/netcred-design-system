@@ -1,0 +1,35 @@
+.input-text-section { padding: var(--space-48); max-width: 1100px; }
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-16);
+  align-items: start;
+}
+
+.input-grid__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.input-grid__state-label {
+  font-size: var(--text-body-xs-size);
+  font-weight: 700;
+  color: var(--color-text-brand);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input-special-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+  align-items: start;
+}
+
+.input-special-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}

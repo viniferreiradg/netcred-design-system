@@ -1,0 +1,40 @@
+.toggle-section { padding: var(--space-48); max-width: 800px; }
+
+/* Grid layout */
+.toggle-grid { display: flex; flex-direction: column; gap: var(--space-16); }
+
+.toggle-grid__header,
+.toggle-grid__row {
+  display: grid;
+  grid-template-columns: 48px repeat(5, 1fr);
+  align-items: center;
+}
+
+/* Header labels */
+.toggle-grid__corner { /* empty spacer */ }
+
+.toggle-grid__state-label {
+  text-align: center;
+  font-size: var(--text-body-xs-size);
+  font-weight: 700;
+  color: var(--color-text-brand);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Row value label */
+.toggle-grid__value-label {
+  font-size: var(--text-body-xs-size);
+  font-weight: 700;
+  color: var(--color-text-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Cell */
+.toggle-grid__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-8) 0;
+}

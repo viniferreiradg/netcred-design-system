@@ -1,0 +1,67 @@
+.logo-section { padding: var(--space-48); max-width: 1200px; }
+
+/* ─── Demo cards ────────────────────────────────────────────────── */
+.logo-demo {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       var(--space-32);
+  padding:   var(--space-48);
+  border-radius: var(--radius-lg);
+  align-items: center;
+}
+
+.logo-demo--light {
+  background: var(--color-bg-primary);
+  border: var(--border-thin) solid var(--color-bg-tertiary);
+}
+
+.logo-demo--dark {
+  background: var(--color-bg-sidebar);
+}
+
+.logo-demo-item {
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            var(--space-12);
+}
+
+.logo-demo-label {
+  font-size:   11px;
+  font-weight: 600;
+  color:       var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.logo-demo-label--dark {
+  color: var(--color-navy-400);
+}
+
+/* ─── Clearance ─────────────────────────────────────────────────── */
+.logo-clearance {
+  display:    flex;
+  align-items: center;
+  gap:        var(--space-48);
+}
+
+.logo-clearance-box {
+  border: 2px dashed var(--color-bg-tertiary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  background: var(--color-bg-secondary);
+  flex-shrink: 0;
+}
+
+.logo-clearance-inner {
+  border: 1.5px dashed var(--color-brand-03-navy-500);
+  padding: var(--space-24);
+  border-radius: var(--radius-md);
+}
+
+.logo-clearance-desc {
+  font-size:  var(--text-body-s-size);
+  color:      var(--color-text-secondary);
+  max-width:  320px;
+  line-height: 1.6;
+}

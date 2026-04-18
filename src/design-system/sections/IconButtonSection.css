@@ -1,0 +1,24 @@
+.icon-button-section { padding: var(--space-48); max-width: 1200px; }
+
+/* Demo states — fill light */
+.icon-btn--hover-fill-light  { background: var(--color-navy-600) !important; }
+.icon-btn--focus-fill-light  { box-shadow: 0 0 0 2px var(--color-bg-sidebar) !important; }
+
+/* Demo states — outline light */
+.icon-btn--hover-outline-light { background: var(--color-bg-secondary) !important; }
+.icon-btn--focus-outline-light { border-color: var(--color-bg-sidebar) !important; }
+
+/* Demo states — icon only light */
+.icon-btn--hover-icon-only-light { background: var(--color-bg-secondary) !important; }
+.icon-btn--focus-icon-only-light { box-shadow: 0 0 0 2px var(--color-bg-sidebar) !important; }
+
+/* Demo states — circle light */
+.icon-btn--hover-circle-light { background: var(--color-navy-600) !important; }
+.icon-btn--focus-circle-light { box-shadow: 0 0 0 2px var(--color-bg-sidebar) !important; }
+
+/* Pressed — compartilhado entre variantes */
+.icon-btn--fill.icon-btn--light.icon-btn--pressed         { background: var(--color-navy-500) !important; }
+.icon-btn--outline.icon-btn--light.icon-btn--pressed       { background: var(--color-bg-tertiary) !important; }
+.icon-btn--icon-only.icon-btn--light.icon-btn--pressed     { background: var(--color-bg-tertiary) !important; }
+.icon-btn--circle.icon-btn--light.icon-btn--pressed        { background: var(--color-navy-500) !important; }
+.icon-btn--circle-notification.icon-btn--light.icon-btn--pressed { background: var(--color-navy-500) !important; }
