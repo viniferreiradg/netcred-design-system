@@ -6,7 +6,6 @@ import IconButton from '../../components/IconButton/IconButton';
 import Button     from '../../components/Button/Button';
 import Radio      from '../../components/Radio/Radio';
 import Stepper    from '../../components/Stepper/Stepper';
-import Chart      from '../../components/Chart/Chart';
 import {
   LayoutDashboard,
   User,
@@ -44,15 +43,6 @@ const USER = {
 
 const STEPS = ['Método de divisão', 'Seleção de porcentagem', 'Detalhes do contrato'];
 
-const CHART_DATA = [
-  { date: '12/04', value: 12400 },
-  { date: '13/04', value: 9800  },
-  { date: '14/04', value: 15200 },
-  { date: '15/04', value: 11000 },
-  { date: '16/04', value: 17800 },
-  { date: '17/04', value: 14300 },
-  { date: '18/04', value: 19600 },
-];
 
 export default function NovoContratoPage() {
   const navigate = useNavigate();
@@ -263,29 +253,13 @@ export default function NovoContratoPage() {
                 <div style={{ marginTop: 'var(--space-12)' }}>
                   <InputText label="Endereço"     value={form.clienteEndereco}  onChange={set('clienteEndereco')}  placeholder="Rua, número, cidade" />
                 </div>
-
-                <h3 className="form-section-label" style={{ marginTop: 'var(--space-24)' }}>Resumo financeiro</h3>
-                <div className="form-summary">
-                  <div className="form-summary__item">
-                    <span className="form-summary__label">Valor total</span>
-                    <span className="form-summary__value">R$ 48.320,00</span>
-                  </div>
-                  <div className="form-summary__item">
-                    <span className="form-summary__label">Valor livre</span>
-                    <span className="form-summary__value">R$ 31.200,00</span>
-                  </div>
-                </div>
-
-                <div style={{ marginTop: 'var(--space-16)' }}>
-                  <Chart data={CHART_DATA} title="Recebíveis por dia" height={180} />
-                </div>
               </div>
 
             </div>
 
             <div className="step-card__actions">
               <Button variant="secondary" size="m" onClick={() => setStep(2)}>Anterior</Button>
-              <Button variant="primary"   size="m" onClick={() => navigate('/recebiveis')}>Ver detalhes</Button>
+              <Button variant="primary"   size="m" onClick={() => navigate('/recebiveis')}>Criar contrato</Button>
             </div>
           </div>
         )}
